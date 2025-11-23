@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Odev2son.Renksecme"
+             Title="Renksecme">
+    <VerticalStackLayout>
+        <ScrollView>
+            <VerticalStackLayout>
+                <Label Text="Kırmızı"/>
+                <HorizontalStackLayout>
+                    <Slider x:Name="RedSlider" Minimum="0" Maximum="255" ValueChanged="Rgb_ValueChanged" WidthRequest="255"/>
+                    <Label x:Name="RedLabel" Text="0" WidthRequest="50"/>
+                </HorizontalStackLayout>
+
+                <Label Text="Yeşil"/>
+                <HorizontalStackLayout>
+                    <Slider x:Name="GreenSlider" Minimum="0" Maximum="255" ValueChanged="Rgb_ValueChanged" WidthRequest="255"/>
+                    <Label x:Name="GreenLabel" Text="0" WidthRequest="50"/>
+                </HorizontalStackLayout>
+
+                <Label Text="Mavi"/>
+                <HorizontalStackLayout>
+                    <Slider x:Name="BlueSlider" Minimum="0" Maximum="255" ValueChanged="Rgb_ValueChanged" WidthRequest="255"/>
+                    <Label x:Name="BlueLabel" Text="0" WidthRequest="50"/>
+                </HorizontalStackLayout>
+
+                <Label Text="Renk Kodu (#RRGGBB)" />
+                <Label x:Name="HexLabel" Text="#000000" FontAttributes="Bold" />
+
+                <HorizontalStackLayout Spacing="10">
+                    <Button Text="Kopyala" Clicked="CopyColor_Clicked" />
+                    <Button Text="Rastgele Renk" Clicked="RandomColor_Clicked" />
+                </HorizontalStackLayout>
+
+                <Frame x:Name="PreviewFrame" HeightRequest="150" CornerRadius="8" HasShadow="True">
+                    <Label Text="Arka plan önizleme" HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Frame>
+
+            </VerticalStackLayout>
+</ScrollView>
+    </VerticalStackLayout>
+</ContentPage>
